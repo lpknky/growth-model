@@ -1,16 +1,7 @@
 Voici ce que ressort le code download_and_cleanning :
-                                                                                                 rule  rows_affected                         action  rows_remaining
-                                                                                        Raw users.csv          70851                 loaded as text           70851
-                                                                                 Exact duplicate rows            562            dropped, first kept           70289
-                                                           Duplicate user_id with conflicting content              0                     none found           70289
-                                           Internal/test accounts (user_id 'QA_', channel 'internal')             45                        removed           70244
-                                                          Mixed date format dd/mm/yyyy in signup_date           1358         parsed day-first, kept           70244
-                                                            Impossible signup_date (1900, 1970, 2099)              7   removed (no cohort possible)           70237
-                        Inconsistent channel labels ('tiktok','meta_ads','Facebook Ads','google_ads')           7336       harmonised to 6 channels           70237
-                                                                                      Missing country           1494 kept as 'Unknown', not imputed           70237
-Chronology checks (trial<signup, sub<trial, end<=start, plan/end without sub, dates after extraction)              0           violations remaining           70237
+                                                                                             
 
-
+On a a chaque fois la modif effectué et le nombre de colonnes affectées par cette modif.
 Il y a donc 8 etapes de nettoyages mais 2 ne sont pas pertinentes ( Duplicate user_id with conflicting content  et Chronology checks )
 Explication de chaque étapes :
 
